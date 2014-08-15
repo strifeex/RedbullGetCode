@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="76caeeba-5e37-4aa5-b08f-ba055d652aad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClickCodeService.wsdl" MetadataType="Wsdl" ID="8a5aaad0-377e-4165-99f6-f4fa21fe003e" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?wsdl" />
+    <MetadataFile FileName="ClickCodeService.disco" MetadataType="Disco" ID="f815ff71-0df6-4b58-9eef-a680b904844a" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?disco" />
+    <MetadataFile FileName="ClickCodeService.xsd" MetadataType="Schema" ID="7b6cb2f7-5e8e-4591-a8e6-40f448d653aa" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClickCodeService1.xsd" MetadataType="Schema" ID="eae2fb25-4f97-4ba7-8f62-66d90de95a93" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ClickCodeService2.xsd" MetadataType="Schema" ID="d37e16e0-776a-4392-a205-11c6c92e54a4" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClickCodeService3.xsd" MetadataType="Schema" ID="cb4db0ab-fece-41ad-b267-cc85baddd7c1" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

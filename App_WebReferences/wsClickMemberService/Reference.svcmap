@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d0e8ac60-ba63-4cd7-b224-b152becbecbe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClickMemberService.xsd" MetadataType="Schema" ID="ee229034-bf2a-4221-a955-4e19f249165f" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClickMemberService1.xsd" MetadataType="Schema" ID="7904e355-0401-42a0-9658-d66fc975d683" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ClickMemberService2.xsd" MetadataType="Schema" ID="c6f50cfc-f6fe-4b9b-9bc2-7289c9a3a2f1" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClickMemberService3.xsd" MetadataType="Schema" ID="f32c967f-ad68-42c2-9137-da13591d7e60" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ClickMemberService.wsdl" MetadataType="Wsdl" ID="1708f320-6a60-42d9-bf07-c1e322a67a8d" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc?wsdl" />
+    <MetadataFile FileName="ClickMemberService.disco" MetadataType="Disco" ID="9b5b987f-8e6a-48c3-8a8e-2a78c8fe2d71" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ClickMemberService/ClickMemberService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

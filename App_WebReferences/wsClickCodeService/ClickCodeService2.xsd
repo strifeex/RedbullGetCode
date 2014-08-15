@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ChkOfflineEventPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChkOfflineEventPeriodDataResult" type="tns:ChkOfflineEventPeriodDataResult" />
+      <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChkOfflineEventPeriod" nillable="true" type="tns:ChkOfflineEventPeriod" />
+  <xs:simpleType name="ChkOfflineEventPeriodDataResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="InformationIsEmpty" />
+      <xs:enumeration value="EventOutOfRangeDate" />
+      <xs:enumeration value="ItemCodeOutOfRangeDate" />
+      <xs:enumeration value="Other">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChkOfflineEventPeriodDataResult" nillable="true" type="tns:ChkOfflineEventPeriodDataResult" />
+  <xs:complexType name="ChkOnlineEventPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChkOnlineEventPeriodDataResult" type="tns:ChkOnlineEventPeriodDataResult" />
+      <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChkOnlineEventPeriod" nillable="true" type="tns:ChkOnlineEventPeriod" />
+  <xs:simpleType name="ChkOnlineEventPeriodDataResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="InformationIsEmpty" />
+      <xs:enumeration value="EventOutOfRangeDate" />
+      <xs:enumeration value="ItemCodeOutOfRangeDate" />
+      <xs:enumeration value="Other">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChkOnlineEventPeriodDataResult" nillable="true" type="tns:ChkOnlineEventPeriodDataResult" />
+  <xs:complexType name="GetOfflineItemCodeDataManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetOfflineItemCodeDataResult" type="tns:GetOfflineItemCodeDataResult" />
+      <xs:element minOccurs="0" name="expireDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="getDuration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="getTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unitTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOfflineItemCodeDataManagement" nillable="true" type="tns:GetOfflineItemCodeDataManagement" />
+  <xs:simpleType name="GetOfflineItemCodeDataResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="InformationIsEmpty" />
+      <xs:enumeration value="OutOffService" />
+      <xs:enumeration value="OfflineDistributedNotFound" />
+      <xs:enumeration value="OfflineCodeNotFound" />
+      <xs:enumeration value="NotFoundDistribute" />
+      <xs:enumeration value="LimitGetRound" />
+      <xs:enumeration value="LimitGetTime" />
+      <xs:enumeration value="NotFoundItemCode" />
+      <xs:enumeration value="Other">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetOfflineItemCodeDataResult" nillable="true" type="tns:GetOfflineItemCodeDataResult" />
+  <xs:complexType name="GetItemCodeDataManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetItemCodeDataResult" type="tns:GetItemCodeDataResult" />
+      <xs:element minOccurs="0" name="expireDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="getDuration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="getTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="itemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unitTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetItemCodeDataManagement" nillable="true" type="tns:GetItemCodeDataManagement" />
+  <xs:simpleType name="GetItemCodeDataResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="InformationIsEmpty" />
+      <xs:enumeration value="OutOffService" />
+      <xs:enumeration value="NotFoundDistribute" />
+      <xs:enumeration value="LimitGetRound" />
+      <xs:enumeration value="LimitGetTime" />
+      <xs:enumeration value="NotFoundItemCode" />
+      <xs:enumeration value="Other">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GetItemCodeDataResult" nillable="true" type="tns:GetItemCodeDataResult" />
+  <xs:complexType name="ChkGetItemCodeDataManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChkGetItemCodeDataResult" type="tns:ChkGetItemCodeDataResult" />
+      <xs:element minOccurs="0" name="getDuration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="getTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unitTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChkGetItemCodeDataManagement" nillable="true" type="tns:ChkGetItemCodeDataManagement" />
+  <xs:simpleType name="ChkGetItemCodeDataResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="InformationIsEmpty" />
+      <xs:enumeration value="OutOffService" />
+      <xs:enumeration value="NotFoundDistribute" />
+      <xs:enumeration value="LimitGetRound" />
+      <xs:enumeration value="LimitGetTime" />
+      <xs:enumeration value="Other">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChkGetItemCodeDataResult" nillable="true" type="tns:ChkGetItemCodeDataResult" />
+  <xs:complexType name="ItemCodeHistoryDataList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCodeHistoryDataListResult" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemCodeHistoryDataList" nillable="true" type="tns:ItemCodeHistoryDataList" />
+</xs:schema>

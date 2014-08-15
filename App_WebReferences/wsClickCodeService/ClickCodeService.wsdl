@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClickCodeService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClickCodeService_ChkOfflineEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChkOfflineEvent" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ChkOfflineEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChkOfflineEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ChkOnlineEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChkOnlineEvent" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ChkOnlineEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChkOnlineEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_GetOfflineItemCodeManagement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfflineItemCodeManagement" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_GetOfflineItemCodeManagement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfflineItemCodeManagementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_GetItemCodeManagement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemCodeManagement" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_GetItemCodeManagement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemCodeManagementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ChkGetItemCodeManagement_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChkGetItemCodeManagement" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ChkGetItemCodeManagement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChkGetItemCodeManagementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ItemCodeHistoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ItemCodeHistoryList" />
+  </wsdl:message>
+  <wsdl:message name="IClickCodeService_ItemCodeHistoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ItemCodeHistoryListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClickCodeService">
+    <wsdl:operation name="ChkOfflineEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClickCodeService/ChkOfflineEvent" message="tns:IClickCodeService_ChkOfflineEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClickCodeService/ChkOfflineEventResponse" message="tns:IClickCodeService_ChkOfflineEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkOnlineEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClickCodeService/ChkOnlineEvent" message="tns:IClickCodeService_ChkOnlineEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClickCodeService/ChkOnlineEventResponse" message="tns:IClickCodeService_ChkOnlineEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfflineItemCodeManagement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClickCodeService/GetOfflineItemCodeManagement" message="tns:IClickCodeService_GetOfflineItemCodeManagement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClickCodeService/GetOfflineItemCodeManagementResponse" message="tns:IClickCodeService_GetOfflineItemCodeManagement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCodeManagement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClickCodeService/GetItemCodeManagement" message="tns:IClickCodeService_GetItemCodeManagement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClickCodeService/GetItemCodeManagementResponse" message="tns:IClickCodeService_GetItemCodeManagement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkGetItemCodeManagement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClickCodeService/ChkGetItemCodeManagement" message="tns:IClickCodeService_ChkGetItemCodeManagement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClickCodeService/ChkGetItemCodeManagementResponse" message="tns:IClickCodeService_ChkGetItemCodeManagement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ItemCodeHistoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClickCodeService/ItemCodeHistoryList" message="tns:IClickCodeService_ItemCodeHistoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClickCodeService/ItemCodeHistoryListResponse" message="tns:IClickCodeService_ItemCodeHistoryList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClickCodeService" type="tns:IClickCodeService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChkOfflineEvent">
+      <soap:operation soapAction="http://tempuri.org/IClickCodeService/ChkOfflineEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkOnlineEvent">
+      <soap:operation soapAction="http://tempuri.org/IClickCodeService/ChkOnlineEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfflineItemCodeManagement">
+      <soap:operation soapAction="http://tempuri.org/IClickCodeService/GetOfflineItemCodeManagement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemCodeManagement">
+      <soap:operation soapAction="http://tempuri.org/IClickCodeService/GetItemCodeManagement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkGetItemCodeManagement">
+      <soap:operation soapAction="http://tempuri.org/IClickCodeService/ChkGetItemCodeManagement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ItemCodeHistoryList">
+      <soap:operation soapAction="http://tempuri.org/IClickCodeService/ItemCodeHistoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClickCodeService">
+    <wsdl:port name="BasicHttpBinding_IClickCodeService" binding="tns:BasicHttpBinding_IClickCodeService">
+      <soap:address location="http://27.254.94.6/ClickService/ClickcodeService/ClickCodeService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

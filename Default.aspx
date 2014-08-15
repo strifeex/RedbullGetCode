@@ -35,7 +35,7 @@
 
             <div class="login">
                 <asp:Button ID="btnLogin" runat="server" onclick="btnLogin_Click" 
-                CssClass="btn-Login" /></div>
+                CssClass="btn-Login" Text="login" /></div>
         </div>
     </div>      
     </form>
