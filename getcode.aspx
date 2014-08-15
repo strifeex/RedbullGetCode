@@ -13,26 +13,39 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-    <input id="i_code" type="text" placeholder="Redbull Code" required="required"/>
-    <div id="btn_shipping" class="one_half last"><a href="#" class="btn btn_red">getcode</a></div>
 
-    <table class="table">
-        <tr >
-          <td >header</td>
-          <td >header</td>
-          <td >header</td>
-          <td >header</td>
-          <td >header</td>
-        </tr>
-        <tr class="active">
-          <td >...</td>
-          <td >...</td>
-          <td >...</td>
-          <td >...</td>
-          <td >...</td>
-        </tr>
-    </table>
+    <form id="form1" runat="server">
+
+    <input id="i_code" type="text" placeholder="Redbull Code" required="required"/><asp:Label 
+        ID="Label1" runat="server" Text="Label"></asp:Label>
+&nbsp;<div id="btn_shipping" class="one_half last"><a class="btn btn_red" onClick="getCodedata();">getcode</a></div>
+
+    <div class="form_list">
+        <p id="itemcode">ITEM CODE</p>
+        <p id="itemDes"></p>
+    </div>
+
+        <script language="JavaScript" type="text/javascript" charset="utf-8">
+            $(".form_list").hide();
+
+            function getCodedata() {
+                var EventParams = {};
+                var icode = document.getElementById('i_code');
+                EventParams['icode'] = icode.value;
+                $.post("getcodeprocess.aspx", EventParams,
+                function (data, status) {
+
+                    var res = data.split("=====split=====");
+                    document.getElementById("itemcode").innerHTML = res[0];
+                    $(".form_list").show();
+                });
+            }
+
+    </script>
+    </form>
 </body>
 </html>
