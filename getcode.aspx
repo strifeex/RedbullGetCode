@@ -28,7 +28,28 @@
         <p id="itemcode">ITEM CODE</p>
         <p id="itemDes"></p>
     </div>
+              <div class="table-responsive">
+              <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
+                class="table table-bordered table-condensed table-hover table-striped" 
+                  AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
+                  PageSize="50" >
+                   <PagerStyle CssClass="cssPager" />
+                <Columns>
+                    <asp:BoundField DataField="userName" HeaderText="username" >
+                    <ItemStyle Width="1%" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="itemCode" HeaderText="Code" >
+                    <ItemStyle Width="5%" />
+                    </asp:BoundField>
+                    <asp:BoundField DataField="getItemDate" HeaderText="date" >
+                    <ItemStyle Width="20%" Wrap="true"/>
+                    </asp:BoundField>
+                </Columns>
+                  <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
+            </asp:GridView>
+            </div>
 
+    </form>
         <script language="JavaScript" type="text/javascript" charset="utf-8">
             $(".form_list").hide();
 
@@ -46,6 +67,5 @@
             }
 
     </script>
-    </form>
 </body>
 </html>
