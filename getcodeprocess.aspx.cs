@@ -18,19 +18,28 @@ public partial class getcodeprocess : System.Web.UI.Page
 
         //wsClickCodeService.GetOfflineItemCodeDataManagement resItem = ClickItem.GetOfflineItemCodeManagement(ApplicationKey.partKey, ApplicationKey.channelKey, ApplicationKey.eventKey, userId, username, icode, userIP);
         //Response.Write("is code => " + resItem.itemCode + " des ==> " + resItem.itemDesc);
-        DateTime tmpdate = DateTime.Now;
-        DateTime lastgetItem = Convert.ToDateTime(Session["lastGetdate"]);
-        TimeSpan difference = tmpdate.Subtract(lastgetItem);
 
-        
-        double totalDays = difference.TotalSeconds;
         int waitsec = 60;
-        if (totalDays > 60)
+        double totalsec = 0;
+        string tmpsec = "60";
+        if (Session["lastGetdate"] != null)
         {
-            waitsec = 0;
+            DateTime tmpdate = DateTime.Now;
+            DateTime lastgetItem = Convert.ToDateTime(Session["lastGetdate"]);
+            TimeSpan difference = tmpdate.Subtract(lastgetItem);
+            totalsec = Math.Ceiling(difference.TotalSeconds);
+
+            if (totalsec > 60)
+            {
+                waitsec = 0;
+            }
+            else if(totalsec >= 0 )
+            {
+                tmpsec = (60 - totalsec).ToString();
+                waitsec = Convert.ToInt32((60 - totalsec).ToString());
+            }
         }
 
-        Response.Write(waitsec);
-        Response.Write("=====split=====");
+        Response.Write("{ \"waitsec\":\"" + waitsec + "\" ,\"totalsec\":\"" + tmpsec + "\" }");
     }
 }

@@ -89,7 +89,10 @@ public partial class getcode : System.Web.UI.Page
 
             int rowCount = dataTable.Rows.Count;
 
-            Session["lastGetdate"] = dataTable.Rows[0].Cells[3].Text;
+            if (rowCount > 0)
+            {
+                Session["lastGetdate"] = dataTable.Rows[0].Cells[3].Text;
+            }
             //int i = 0;
 
             //while (i < rowCount)

@@ -68,7 +68,7 @@
               <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
                 class="table-bordered table-condensed table-hover table-striped" 
                   AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
-                  PageSize="10" >
+                  PageSize="5" >
                    <PagerStyle CssClass="cssPager" />
                 <Columns>
                     <asp:BoundField DataField="itemCode" HeaderText="Code" >
@@ -96,30 +96,11 @@
 
             $("#btngetcode").hide();
 
-
             var milisec = 0
             var seconds = 10
 
-
             function display() {
-//                if (milisec <= 0) {
-//                    milisec = 9
-//                    seconds -= 1
-//                }
-//                if (seconds <= -1) {
 
-//                    $("#btngetcode").show();
-//                    $("#countdown").hide();
-
-//                    return;
-//                }
-//                else
-//                    milisec -= 1
-//                countdown.innerHTML = seconds + "." + milisec + " s"
-//                setTimeout("display()", 100)
-
-
-                // get tag element
                 var countdown = document.getElementById("countdown");
 
                 setInterval(function () {
@@ -135,7 +116,6 @@
                         seconds -= 1;
                     }
 
-                    // format countdown string + set tag value
                     countdown.innerHTML = seconds + "s";
 
                 }, 1000);
@@ -147,15 +127,14 @@
                 var icode = document.getElementById('i_code');
                 EventParams['icode'] = icode.value;
                 $.post("getcodeprocess.aspx", EventParams,
-                function (data, status) {
+                    function (data, status) {
 
-                    var res = data.split("=====split=====");
-                    //document.getElementById("Lblitem").innerHTML = res[0];
-                    seconds = res[0];
-                    display();
-                    //$(".form_list").show();
-                    //window.location = "getcode.aspx";
-                });
+                        //document.getElementById("usernameLabel").innerHTML = data.totalsec;
+                        seconds = data.waitsec;
+                        display();
+                        //$(".form_list").show();
+                        //window.location = "getcode.aspx";
+                    }, "json");
             }
             getCodedata();
 
