@@ -10,7 +10,8 @@
 	<meta name="keywords" content="เกมส์, เกม, เกมส์ออนไลน์, เกมส์ออนไลน์ใหม่, เล่นเกมส์ออนไลน์, game, games online, FNB, Finalbullet">
     <meta name="description" content="เกมออนไลน์ เกมส์ออนไลน์ เกมส์มันๆ สนุกๆ เล่นเกมส์ เกม finalbullet เกมส์ game games online fnb">	
 	<meta http-equiv="robots" content="index,follow">
-
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 

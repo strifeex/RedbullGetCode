@@ -1,0 +1,53 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+textarea, input {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #000;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tablecontent {
+  width: 900px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tablecontent td, .tablecontent th {
+  text-align: center;
+}
+
+/*custom datagrid pagination asp*/
+.cssPager {
+  background-color: #fff;
+  padding: 2px;
+  margin: 2% auto;
+  font-size: 18px;
+}
+
+.cssPager a {
+  margin: auto 1%;
+  background-color: #444;
+  padding: 5px 10px 5px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cssPager a:hover {
+  background-color: #b3b3b3;
+  color: #fff;
+}
+
+.cssPager span {
+  background-color: #fff;
+  color: #b3b3b3;
+  padding: 5px 10px 5px 10px;
+}

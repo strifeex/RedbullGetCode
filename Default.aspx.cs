@@ -45,7 +45,6 @@ public partial class _Default : System.Web.UI.Page
                 this.KeepSession(ds);
                 //this.ChkGetClickItemCode(ds);
                 Response.Redirect("getcode.aspx");
-
             }
             else
             {
