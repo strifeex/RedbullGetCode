@@ -54,13 +54,67 @@ public partial class getcode : System.Web.UI.Page
                 Lblitem.Text = "ได้รับโค้ด" + resItem.itemCode + " " + resItem.itemDesc + " ";
                 switch (resItem.itemName)
                 {
-                    case "Red Bull_002":
+                    case "Red Bull_001":
                         Image1.ImageUrl = "images/coin_prize20000.png";
                         break;
-                    case "Red Bull_016":
+                    case "Red Bull_002":
                         Image1.ImageUrl = "images/gun-1.jpg";
                         break;
+                    case "Red Bull_003":
+                        Image1.ImageUrl = "images/gun-2.jpg";
+                        break;
+                    case "Red Bull_004":
+                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        break;
+                    case "Red Bull_005":
+                        Image1.ImageUrl = "images/gun-1.jpg";
+                        break;
+                    case "Red Bull_006":
+                        Image1.ImageUrl = "images/gun-2.jpg";
+                        break;
                     case "Red Bull_007":
+                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        break;
+                    case "Red Bull_008":
+                        Image1.ImageUrl = "images/gun-1.jpg";
+                        break;
+                    case "Red Bull_009":
+                        Image1.ImageUrl = "images/gun-2.jpg";
+                        break;
+                    case "Red Bull_010":
+                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        break;
+                    case "Red Bull_011":
+                        Image1.ImageUrl = "images/gun-1.jpg";
+                        break;
+                    case "Red Bull_012":
+                        Image1.ImageUrl = "images/gun-2.jpg";
+                        break;
+                    case "Red Bull_013":
+                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        break;
+                    case "Red Bull_014":
+                        Image1.ImageUrl = "images/gun-1.jpg";
+                        break;
+                    case "Red Bull_015":
+                        Image1.ImageUrl = "images/gun-2.jpg";
+                        break;
+                    case "Red Bull_016":
+                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        break;
+                    case "Red Bull_017":
+                        Image1.ImageUrl = "images/gun-1.jpg";
+                        break;
+                    case "Red Bull_018":
+                        Image1.ImageUrl = "images/gun-2.jpg";
+                        break;
+                    case "Red Bull_019":
+                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        break;
+                    case "Red Bull_020":
+                        Image1.ImageUrl = "images/gun-1.jpg";
+                        break;
+                    case "Red Bull_021":
                         Image1.ImageUrl = "images/gun-2.jpg";
                         break;
                     default:

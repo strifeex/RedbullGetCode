@@ -14,7 +14,6 @@
 
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
 
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -28,45 +27,47 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-
 </head>
 <body>
-<asp:Label ID="usernameLabel" runat="server" Text="Label"></asp:Label>
+<div class="maincontent">
     <form id="form1" runat="server">
+    <div class="leftpanel">
+        <asp:Label ID="usernameLabel" runat="server" Text="Label"></asp:Label><br>
+    <%--    <input id="i_code" type="text" placeholder="Redbull Code" required="required"/>--%>
+        <asp:TextBox ID="i_code" runat="server" placeholder="Redbull Code" required="required"></asp:TextBox>
 
-<%--    <input id="i_code" type="text" placeholder="Redbull Code" required="required"/>--%>
-    <asp:TextBox ID="i_code" runat="server" placeholder="Redbull Code" required="required"></asp:TextBox>
-
-                    <div class="captcha"><cc1:CaptchaControl ID="ccCode" runat="server" 
-                            CaptchaLength="6" CaptchaMaxTimeout="200" CaptchaMinTimeout="5" Height="45px" 
-                            Width="322px" CaptchaWidth="305" CaptchaHeight="45" CssClass="capcha_txt" 
-                            Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
-                    CaptchaBackgroundNoise="None" CaptchaFontWarping="None" 
-                    CaptchaLineNoise="Extreme" />
+                        <div class="captcha"><cc1:CaptchaControl ID="ccCode" runat="server" 
+                                CaptchaLength="6" CaptchaMaxTimeout="200" CaptchaMinTimeout="5" Height="45px" 
+                                Width="322px" CaptchaWidth="305" CaptchaHeight="45" CssClass="capcha_txt" 
+                                Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                        CaptchaBackgroundNoise="None" CaptchaFontWarping="None" 
+                        CaptchaLineNoise="Extreme" />
                         
-    </div>
-            <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
-                placeholder="Enter code" class="form-control" MaxLength="6" 
-                CssClass="btn-input"></asp:TextBox>
+        </div>
+                <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
+                    placeholder="Enter code" class="form-control" MaxLength="6" 
+                    CssClass="btn-input"></asp:TextBox>
 
-    </div>
+        </div>
 
-<%--<a class="btn btn_red" onClick="getCodedata();">getcode</a>--%>
-<span id="countdown"></span>
-                <asp:Button ID="btngetcode" runat="server" onclick="btngetcode_Click" 
-                CssClass="btn-Login" Text="getcode" />
+    <%--<a class="btn btn_red" onClick="getCodedata();">getcode</a>--%>
+        <span id="countdown"></span>
+                    <asp:Button ID="btngetcode" runat="server" onclick="btngetcode_Click" 
+                    CssClass="btn-Login" Text="getcode" />
 
-    <div class="form_list">
-    <asp:Label ID="Lblitem" runat="server" Text="Label"></asp:Label>
-        <p id="itemcode">ITEM CODE</p>
-        <p id="itemDes"></p>
-    </div>
-                <asp:Image ID="Image1" runat="server" />
-    <br>history
+        <div class="form_list">
+        <asp:Label ID="Lblitem" runat="server" Text="Label"></asp:Label>
+            <p id="itemcode">ITEM CODE</p>
+            <p id="itemDes"></p>
+        </div>
+        <asp:Image ID="Image1" runat="server" />
+    </div>               
+      <div class="rightpanel">
+        <br>history
 
               <div class="table-responsive tablecontent">
               <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
-                class="table-bordered table-condensed table-hover table-striped" 
+                class="table-bordered table-condensed table-hover table-striped tablecontent" 
                   AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
                   PageSize="5" >
                    <PagerStyle CssClass="cssPager" />
@@ -90,8 +91,12 @@
                   <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
             </asp:GridView>
             </div>
-<a class="btn btn_red" onClick="logout();">logout</a>
+        <a class="btn btn_red" onClick="logout();">logout</a>
+    </div>
+
     </form>
+    </div>
+
         <script language="JavaScript" type="text/javascript" charset="utf-8">
 
             $("#btngetcode").hide();
@@ -149,22 +154,23 @@
             }
 
 
-    </script>
+    </script> 
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
       m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-52510534-1', 'auto');
-        ga('send', 'pageview');
+            ga('create', 'UA-52510534-1', 'auto');
+            ga('send', 'pageview');
 
     </script>
 
-    
+    <div class="statpanel">
     <script type="text/javascript" language="javascript1.1" src="http://tracker.stats.in.th/tracker.php?sid=59428"></script>
     <noscript><a target="_blank" href="http://www.stats.in.th/">www.Stats.in.th</a></noscript>
 
@@ -178,5 +184,6 @@
     </script></a>
     <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2735357&101" alt="site stats" border="0"></a></noscript>
     <!-- Histats.com  END  -->
+    </div>
 </body>
 </html>
