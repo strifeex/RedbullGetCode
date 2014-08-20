@@ -51,7 +51,9 @@
         </div>
 
     <%--<a class="btn btn_red" onClick="getCodedata();">getcode</a>--%>
-        <span id="countdown"></span>
+    <div class="coundownpanel"><span id="countdown"></span></div>
+    <div class="loadingPanel"></div>
+
                     <asp:Button ID="btngetcode" runat="server" onclick="btngetcode_Click" 
                     CssClass="btn-Login" Text="getcode" />
 
@@ -72,20 +74,20 @@
                   PageSize="5" >
                    <PagerStyle CssClass="cssPager" />
                 <Columns>
+                    <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" >
+                    <ItemStyle Width="12%" Wrap="true"/>
+                    </asp:BoundField>
                     <asp:BoundField DataField="itemCode" HeaderText="Code" >
                     <ItemStyle Width="5%" />
                     </asp:BoundField>
                     <asp:BoundField DataField="itemName" HeaderText="itemname" >
-                    <ItemStyle Width="10%" />
+                    <ItemStyle Width="5%" />
                     </asp:BoundField>
                     <asp:BoundField DataField="itemDesc" HeaderText="ของรางวัล" htmlencode="false">
-                    <ItemStyle Width="10%" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" >
-                    <ItemStyle Width="10%" Wrap="true"/>
+                    <ItemStyle Width="23%" />
                     </asp:BoundField>
                     <asp:BoundField DataField="expireDate" HeaderText="วันหมดอายุ" >
-                    <ItemStyle Width="10%" Wrap="true"/>
+                    <ItemStyle Width="12%" Wrap="true"/>
                     </asp:BoundField>
                 </Columns>
                   <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
@@ -101,6 +103,21 @@
 
             $("#btngetcode").hide();
 
+            $('.loadingPanel').html('<div class="spinner">' +
+            '<div class="circle1 circle"></div>' +
+            '<div class="circle2 circle"></div>' +
+            '<div class="circle3 circle"></div>' +
+            '<div class="circle4 circle"></div>' +
+            '<div class="circle5 circle"></div>' +
+            '<div class="circle6 circle"></div>' +
+            '<div class="circle7 circle"></div>' +
+            '<div class="circle8 circle"></div>' +
+            '<div class="circle9 circle"></div>' +
+            '<div class="circle10 circle"></div>' +
+            '<div class="circle11 circle"></div>' +
+            '<div class="circle12 circle"></div>' +
+          '</div>');
+
             var milisec = 0
             var seconds = 10
 
@@ -114,14 +131,15 @@
 
                         $("#btngetcode").show();
                         $("#countdown").hide();
-
+                        $('.loadingPanel').hide();
+                        countdown.innerHTML = seconds + "";
                         return;
                     }
                     else {
                         seconds -= 1;
                     }
 
-                    countdown.innerHTML = seconds + "s";
+                    countdown.innerHTML = seconds + "";
 
                 }, 1000);
 

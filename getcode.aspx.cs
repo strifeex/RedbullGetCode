@@ -145,7 +145,7 @@ public partial class getcode : System.Web.UI.Page
 
             if (rowCount > 0)
             {
-                Session["lastGetdate"] = dataTable.Rows[0].Cells[3].Text;
+                Session["lastGetdate"] = dataTable.Rows[0].Cells[0].Text;
             }
             //int i = 0;
 
