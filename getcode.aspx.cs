@@ -38,9 +38,6 @@ public partial class getcode : System.Web.UI.Page
         }
         else
         {
-            //Go to Process
-            //wsClickMemberService.ClickAlotLoginMember resItem = ClickMember.LoginMember(4, txtUser.Text, txtPwd.Text);
-
             string icode = i_code.Text;
             string userIP = Request.UserHostAddress;
             string userId = MISCoreLibrary.ClsDecrypt.DecryptSTD(Convert.ToString(((AuthenCommon)(Session["GetItemUserAuthen"])).userId), "GjrAIdzK97quE67Pho3pBhpV6VPP72hB", "OI1miOctWpPCvOu9");
@@ -48,6 +45,7 @@ public partial class getcode : System.Web.UI.Page
 
             wsClickCodeService.GetOfflineItemCodeDataManagement resItem = ClickItem.GetOfflineItemCodeManagement(ApplicationKey.partKey, ApplicationKey.channelKey, ApplicationKey.eventKey, userId, username, icode, userIP);
             //Response.Write("is code => " + resItem.itemCode + " des ==> " + resItem.itemDesc);
+            //usernameLabel.Text = resItem.GetOfflineItemCodeDataResult.ToString();
             if (resItem.itemCode != null)
             {
                 //ScriptManager.RegisterClientScriptBlock(btngetcode, typeof(Button), "Onclick", "alert('redbull code ไม่ถูกต้อง กรุณาทดลองใหม่อีกครั้งค่ะ');", true); return;

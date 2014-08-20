@@ -80,9 +80,6 @@
                     <asp:BoundField DataField="itemCode" HeaderText="Code" >
                     <ItemStyle Width="5%" />
                     </asp:BoundField>
-                    <asp:BoundField DataField="itemName" HeaderText="itemname" >
-                    <ItemStyle Width="5%" />
-                    </asp:BoundField>
                     <asp:BoundField DataField="itemDesc" HeaderText="ของรางวัล" htmlencode="false">
                     <ItemStyle Width="23%" />
                     </asp:BoundField>
