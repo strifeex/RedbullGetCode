@@ -152,8 +152,7 @@
                         //document.getElementById("usernameLabel").innerHTML = data.totalsec;
                         seconds = data.waitsec;
                         display();
-                        //$(".form_list").show();
-                        //window.location = "getcode.aspx";
+
                     }, "json");
             }
             getCodedata();
@@ -167,7 +166,6 @@
                     window.location = "default.aspx";
                 });
             }
-
 
     </script> 
 

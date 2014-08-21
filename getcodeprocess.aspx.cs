@@ -31,9 +31,6 @@ public partial class getcodeprocess : System.Web.UI.Page
             }
 
             Response.Write("{ \"waitsec\":\"" + waitsec + "\" ,\"totalsec\":\"" + waitsec + "\" }");
-        }
-
-        
-        
+        } 
     }
 }

@@ -25,7 +25,6 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        //dataset for userlogin result
         DataSet ds = new DataSet();
 
         ccCode.ValidateCaptcha(txtCaptcha.Text);
@@ -36,14 +35,13 @@ public partial class _Default : System.Web.UI.Page
         }
         else
         {    
-            //Go to Process
+            
             wsClickMemberService.ClickAlotLoginMember resItem = ClickMember.LoginMember(4, txtUser.Text, txtPwd.Text);
             
             if (resItem.ClickAlotMemberDataListResult != null)
             {
                 ds = resItem.ClickAlotMemberDataListResult;
                 this.KeepSession(ds);
-                //this.ChkGetClickItemCode(ds);
                 Response.Redirect("getcode.aspx");
             }
             else

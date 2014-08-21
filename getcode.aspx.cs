@@ -48,7 +48,6 @@ public partial class getcode : System.Web.UI.Page
             //usernameLabel.Text = resItem.GetOfflineItemCodeDataResult.ToString();
             if (resItem.itemCode != null)
             {
-                //ScriptManager.RegisterClientScriptBlock(btngetcode, typeof(Button), "Onclick", "alert('redbull code ไม่ถูกต้อง กรุณาทดลองใหม่อีกครั้งค่ะ');", true); return;
                 Lblitem.Text = "ได้รับโค้ด" + resItem.itemCode + " " + resItem.itemDesc + " ";
                 switch (resItem.itemName)
                 {
