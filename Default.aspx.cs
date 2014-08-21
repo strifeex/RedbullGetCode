@@ -62,4 +62,9 @@ public partial class _Default : System.Web.UI.Page
         Session["GetItemUserAuthen"] = Authen;
     }
 
+    protected void _Click(object sender, EventArgs e)
+    {
+
+    }
+
 }

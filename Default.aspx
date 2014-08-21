@@ -24,12 +24,19 @@
             <div class="pass"><asp:TextBox ID="txtPwd" required="required" runat="server" TextMode="Password" 
                 placeholder="Password" class="form-control" MaxLength="20" CssClass="btn-input"></asp:TextBox></div>
         
-            <div class="captcha"><cc1:CaptchaControl ID="ccCode" runat="server" 
-                            CaptchaLength="6" CaptchaMaxTimeout="200" CaptchaMinTimeout="5" Height="45px" 
-                            Width="322px" CaptchaWidth="305" CaptchaHeight="45" CssClass="capcha_txt" 
-                            Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
-                    CaptchaBackgroundNoise="None" CaptchaFontWarping="None" 
-                    CaptchaLineNoise="Extreme" /></div>
+            <div class="captcha">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                                <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
+                                    CaptchaMinTimeout="5" Height="40px" Width="225px" CaptchaWidth="225" 
+                                    CaptchaHeight="40" CssClass="capcha_txt" 
+                                    Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                                    CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
+                </ContentTemplate>
+            </asp:UpdatePanel>     
+            </div>
+
             <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
                 placeholder="Enter code" class="form-control" MaxLength="6" 
                 CssClass="btn-input"></asp:TextBox></div>

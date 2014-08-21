@@ -230,3 +230,12 @@ textarea, input {
   position: relative;
   padding-left: 50%;
 }
+
+.btnRefresh {
+  background: url("../images/ico_refresh.gif") no-repeat scroll center center transparent;
+  display: block;
+  height: 17px;
+  left: 230px;
+  position: relative;
+  width: 16px;
+}

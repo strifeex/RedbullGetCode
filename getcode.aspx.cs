@@ -199,4 +199,8 @@ public partial class getcode : System.Web.UI.Page
         //    lblFileExt.Text = DataBinder.Eval(e.Row.DataItem, "acCode").ToString();
         //}
     }
+    protected void _Click(object sender, EventArgs e)
+    {
+
+    }
 }

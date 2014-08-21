@@ -36,14 +36,14 @@
     <%--    <input id="i_code" type="text" placeholder="Redbull Code" required="required"/>--%>
         <asp:TextBox ID="i_code" runat="server" placeholder="Redbull Code" required="required"></asp:TextBox>
 
-                        <div class="captcha"><cc1:CaptchaControl ID="ccCode" runat="server" 
-                                CaptchaLength="6" CaptchaMaxTimeout="200" CaptchaMinTimeout="5" Height="45px" 
-                                Width="322px" CaptchaWidth="305" CaptchaHeight="45" CssClass="capcha_txt" 
-                                Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
-                        CaptchaBackgroundNoise="None" CaptchaFontWarping="None" 
-                        CaptchaLineNoise="Extreme" />
-                        
-        </div>
+                <ContentTemplate>
+                                <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
+                                    CaptchaMinTimeout="5" Height="40px" Width="225px" CaptchaWidth="225" 
+                                    CaptchaHeight="40" CssClass="capcha_txt" 
+                                    Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                                    CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
+                </ContentTemplate>
+
                 <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
                     placeholder="Enter code" class="form-control" MaxLength="6" 
                     CssClass="btn-input"></asp:TextBox>
@@ -67,28 +67,28 @@
       <div class="rightpanel">
         <br>history
 
-              <div class="table-responsive tablecontent">
-              <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
-                class="table-bordered table-condensed table-hover table-striped tablecontent" 
-                  AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
-                  PageSize="5" >
-                   <PagerStyle CssClass="cssPager" />
-                <Columns>
-                    <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" >
-                    <ItemStyle Width="12%" Wrap="true"/>
-                    </asp:BoundField>
-                    <asp:BoundField DataField="itemCode" HeaderText="Code" >
-                    <ItemStyle Width="5%" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="itemDesc" HeaderText="ของรางวัล" htmlencode="false">
-                    <ItemStyle Width="23%" />
-                    </asp:BoundField>
-                    <asp:BoundField DataField="expireDate" HeaderText="วันหมดอายุ" >
-                    <ItemStyle Width="12%" Wrap="true"/>
-                    </asp:BoundField>
-                </Columns>
-                  <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
-            </asp:GridView>
+            <div class="table-responsive tablecontent">
+                  <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
+                    class="table-bordered table-condensed table-hover table-striped tablecontent" 
+                      AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
+                      PageSize="5" >
+                       <PagerStyle CssClass="cssPager" />
+                    <Columns>
+                        <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" >
+                        <ItemStyle Width="12%" Wrap="true"/>
+                        </asp:BoundField>
+                        <asp:BoundField DataField="itemCode" HeaderText="Code" >
+                        <ItemStyle Width="5%" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="itemDesc" HeaderText="ของรางวัล" htmlencode="false">
+                        <ItemStyle Width="23%" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="expireDate" HeaderText="วันหมดอายุ" >
+                        <ItemStyle Width="12%" Wrap="true"/>
+                        </asp:BoundField>
+                    </Columns>
+                      <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
+                </asp:GridView>
             </div>
         <a class="btn btn_red" onClick="logout();">logout</a>
     </div>
@@ -100,20 +100,20 @@
 
             $("#btngetcode").hide();
 
-            $('.loadingPanel').html('<div class="spinner">' +
-            '<div class="circle1 circle"></div>' +
-            '<div class="circle2 circle"></div>' +
-            '<div class="circle3 circle"></div>' +
-            '<div class="circle4 circle"></div>' +
-            '<div class="circle5 circle"></div>' +
-            '<div class="circle6 circle"></div>' +
-            '<div class="circle7 circle"></div>' +
-            '<div class="circle8 circle"></div>' +
-            '<div class="circle9 circle"></div>' +
-            '<div class="circle10 circle"></div>' +
-            '<div class="circle11 circle"></div>' +
-            '<div class="circle12 circle"></div>' +
-          '</div>');
+//            $('.loadingPanel').html('<div class="spinner">' +
+//            '<div class="circle1 circle"></div>' +
+//            '<div class="circle2 circle"></div>' +
+//            '<div class="circle3 circle"></div>' +
+//            '<div class="circle4 circle"></div>' +
+//            '<div class="circle5 circle"></div>' +
+//            '<div class="circle6 circle"></div>' +
+//            '<div class="circle7 circle"></div>' +
+//            '<div class="circle8 circle"></div>' +
+//            '<div class="circle9 circle"></div>' +
+//            '<div class="circle10 circle"></div>' +
+//            '<div class="circle11 circle"></div>' +
+//            '<div class="circle12 circle"></div>' +
+//          '</div>');
 
             var milisec = 0
             var seconds = 10
