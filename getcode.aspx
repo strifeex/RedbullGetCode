@@ -22,40 +22,39 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 <div class="maincontent">
     <form id="form1" runat="server">
     <div class="leftpanel">
-        <asp:Label ID="usernameLabel" runat="server" Text="Label"></asp:Label><br>
-    <%--    <input id="i_code" type="text" placeholder="Redbull Code" required="required"/>--%>
-        <asp:TextBox ID="i_code" runat="server" placeholder="Redbull Code" required="required"></asp:TextBox>
+    <div class="leftpanel__headEvent"></div>
+    
+    <div class="leftpanel__getitembox">   
+        <asp:TextBox ID="i_code" runat="server" placeholder="" required="required" class="getitembox__igetcode"></asp:TextBox>
+        <div class="coundownpanel"><span id="countdown"></span></div>
+        <%--<div class="loadingPanel"></div>--%>
+        <asp:Button ID="btngetcode" runat="server" style="cursor:pointer;" onclick="btngetcode_Click" 
+        CssClass="getitembox__btn--getcode" Text="" />
+    </div>
+    <ContentTemplate>
+                    <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
+                        CaptchaMinTimeout="5" Height="40px" Width="225px" CaptchaWidth="225" 
+                        CaptchaHeight="40" CssClass="capcha_txt" 
+                        Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                        CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh2" CausesValidation="false"></asp:LinkButton>  
+    </ContentTemplate>
 
-                <ContentTemplate>
-                                <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
-                                    CaptchaMinTimeout="5" Height="40px" Width="225px" CaptchaWidth="225" 
-                                    CaptchaHeight="40" CssClass="capcha_txt" 
-                                    Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
-                                    CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
-                </ContentTemplate>
+    <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
+                placeholder="" class="form-control" MaxLength="6" 
+                CssClass="btn-input"></asp:TextBox>
+    </div>
 
-                <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
-                    placeholder="Enter code" class="form-control" MaxLength="6" 
-                    CssClass="btn-input"></asp:TextBox>
-
-        </div>
-
-    <%--<a class="btn btn_red" onClick="getCodedata();">getcode</a>--%>
-    <div class="coundownpanel"><span id="countdown"></span></div>
-    <div class="loadingPanel"></div>
-
-                    <asp:Button ID="btngetcode" runat="server" onclick="btngetcode_Click" 
-                    CssClass="btn-Login" Text="getcode" />
+    <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/index.php/users/register"></a>
 
         <div class="form_list">
         <asp:Label ID="Lblitem" runat="server" Text="Label"></asp:Label>
@@ -63,15 +62,17 @@
             <p id="itemDes"></p>
         </div>
         <asp:Image ID="Image1" runat="server" />
-    </div>               
-      <div class="rightpanel">
+    </div>
+                   
+    <div class="rightpanel">
+      <asp:Label ID="usernameLabel" runat="server" Text="Label"></asp:Label>
         <br>history
 
             <div class="table-responsive tablecontent">
                   <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
                     class="table-bordered table-condensed table-hover table-striped tablecontent" 
                       AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
-                      PageSize="5" >
+                      PageSize="10" >
                        <PagerStyle CssClass="cssPager" />
                     <Columns>
                         <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" >
@@ -98,7 +99,7 @@
 
         <script language="JavaScript" type="text/javascript" charset="utf-8">
 
-            $("#btngetcode").hide();
+            //$("#btngetcode").hide();
 
 //            $('.loadingPanel').html('<div class="spinner">' +
 //            '<div class="circle1 circle"></div>' +

@@ -11,42 +11,64 @@
     <meta name="description" content="เกมออนไลน์ เกมส์ออนไลน์ เกมส์มันๆ สนุกๆ เล่นเกมส์ เกม finalbullet เกมส์ game games online fnb">	
 	<meta http-equiv="robots" content="index,follow">
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/fonts.css"   charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
+<div class="loginMain">
 <form id="form1" runat="server">
-    <div id="wrapper">
-        <div id="nav-login">
 
-            <div class="user"><asp:TextBox ID="txtUser" required="required" runat="server" placeholder="Username" 
-                class="form-control" MaxLength="20" CssClass="btn-input"></asp:TextBox></div>
+<div class="leftside">
+    <div class="leftside__headEvent"></div>
+    <a class="leftside__btn--infoevent" href="https://clickalot.co.th/index.php/users/register"></a>
+</div>
+<div class="rightside">
+<div class="rightside__txthead">กรุณาล็อกอินเข้าสู่ระบบรับไอเทมโค้ด</div>
+<div class="rightside__username">
+    <div class="labeltxt">กรุณากรอกไอดี</div>
+    <asp:TextBox ID="txtUser" required="required" runat="server" placeholder="" 
+                class="form-control" MaxLength="20" CssClass="IDinput"></asp:TextBox>
+</div>
+<div class="rightside__password">
+    <div class="labeltxt">กรุณากรอกรหัสผ่าน</div>
             <div class="pass"><asp:TextBox ID="txtPwd" required="required" runat="server" TextMode="Password" 
-                placeholder="Password" class="form-control" MaxLength="20" CssClass="btn-input"></asp:TextBox></div>
-        
+                placeholder="" class="form-control" MaxLength="20" CssClass="btn-input"></asp:TextBox></div>
+</div>
+<div class="rightside__captcha">
             <div class="captcha">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
                                 <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
-                                    CaptchaMinTimeout="5" Height="40px" Width="225px" CaptchaWidth="225" 
-                                    CaptchaHeight="40" CssClass="capcha_txt" 
+                                    CaptchaMinTimeout="5" Height="55px" Width="250px" CaptchaWidth="250" 
+                                    CaptchaHeight="55" CssClass="capcha_txt" 
                                     Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
                                     CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
                 </ContentTemplate>
             </asp:UpdatePanel>     
             </div>
-
-            <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
-                placeholder="Enter code" class="form-control" MaxLength="6" 
+            <div class="labeltxt">กรุณาระบุอักษรตามภาพ</div>
+                        <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
+                placeholder="" class="form-control" MaxLength="6" 
                 CssClass="btn-input"></asp:TextBox></div>
+</div>
+<div class="rightside__buttonbox">
+                <asp:Button ID="btnLogin" runat="server" style="cursor:pointer;" onclick="btnLogin_Click" 
+                CssClass="buttonbox__btn--login" Text="" />
+                
+                <a class="buttonbox__btn--forgetID" href="https://clickalot.co.th/index.php/users/register"></a>
 
-            <div class="login">
-                <asp:Button ID="btnLogin" runat="server" onclick="btnLogin_Click" 
-                CssClass="btn-Login" Text="login" /></div>
-        </div>
-    </div>      
+                <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/index.php/users/register"></a>
+
+                <a class="buttonbox__btn--problem" href="https://clickalot.co.th/index.php/users/register"></a>
+</div>
+
+
+</div>
+
+     
     </form>
+</div>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -60,7 +82,7 @@
 
     </script>
 
-    
+    <div class="statpanel">
     <script type="text/javascript" language="javascript1.1" src="http://tracker.stats.in.th/tracker.php?sid=59428"></script>
     <noscript><a target="_blank" href="http://www.stats.in.th/">www.Stats.in.th</a></noscript>
 
@@ -74,5 +96,6 @@
     </script></a>
     <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2735357&101" alt="site stats" border="0"></a></noscript>
     <!-- Histats.com  END  -->
+    </div>
 </body>
 </html>

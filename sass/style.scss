@@ -1,29 +1,173 @@
-$bgcorlor: #fff;
+$bgcorlor: #000;
 $textcolor: #000;
 body
 {
+  font-family: 'PSLXSAMSON';
+  font-size: 40px;
   background-color: $bgcorlor;
   color: $textcolor;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 textarea, input{
- background-color: transparent; 
- border-style: solid; 
- border-width: 0px 0px 1px 0px; 
- border-color: #000;
+ //background-color: #c1c1c1; 
+ //border-style: solid; 
+ //border-width: 0px 0px 1px 0px; 
+ //border-color: #000;
+    border-radius: 2px;
+    background: url('../images/inputBG-compressor.png') no-repeat;
+    width: 354px;
+    height: 39px;
+    text-align: center;
 }
+
+.loginMain{
+    background-image: url('../images/redbull-login-compressor.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height:800px;
+    width:1200px;
+    margin: auto;
+}
+.leftside{
+    width: 720px;
+    height: 800px;
+    float: left;
+}
+.leftside__headEvent{
+    height: 620px;
+}
+.leftside__btn--infoevent{
+    background: url('../images/btn_infoevent-compressor.png') no-repeat;
+    width: 352px;
+    height: 99px;
+    display: block;
+    margin: auto;
+}
+
+.rightside{
+    width: 480px;
+    height: 800px;
+    float: right;
+}
+.rightside__txthead{
+    margin-top: 40px;
+    color: #ffc500;
+    text-align: center;
+    font-size: 50px;
+}
+.labeltxt{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    
+}
+.rightside__username{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.rightside__password{
+    margin-top: 20px;
+    text-align: center;
+}
+.rightside__captcha{
+    margin-top: 40px;
+    text-align: center;
+}
+.capcha_txt{
+    margin-left: 80px;
+}
+#UpdatePanel1{
+    height: 80px;
+}
+.rightside__buttonbox{
+    width: 352px;
+    margin: auto;
+    margin-top: 30px;
+}
+.buttonbox__btn--login{
+    background: url('../images/btn_login-compressor.png') no-repeat;
+    width: 352px;
+    height: 99px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.buttonbox__btn--forgetID{
+    background: url('../images/btn_forgetID-compressor.png') no-repeat;
+    width: 171px;
+    height: 43px;
+    display: block;
+    margin: auto;
+    float: left;
+}
+.buttonbox__btn--forgetPass{
+    background: url('../images/btn_forgetpass-compressor.png') no-repeat;
+    width: 167px;
+    height: 43px;
+    display: block;
+    margin: auto;
+    float: right;
+
+}
+.buttonbox__btn--problem{
+    background: url('../images/btn_ploblem-compressor.png') no-repeat;
+    width: 350px;
+    height: 39px;
+    display: block;
+    margin: auto;
+    margin-top: 65px;
+}
+
+/////////////////////////////////// page2 get item
 .maincontent{
-    width: 1300px;
+    background-image: url('../images/redbull-getcodeBG-compressor.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height:800px;
+    width:1200px;
+    margin: auto;
 }
 .leftpanel{
+    width: 700px;
+    height: 800px;
     float: left;
 
 }
+
+.leftpanel__headEvent{
+    height: 420px;
+}
+.getitembox{
+    width: 386px;
+    height: 39px;
+}
+.getitembox__igetcode{
+    border-radius: 2px;
+    background: url('../images/inputBG_GetItem-compressor.png') no-repeat;
+    width: 232px;
+    height: 39px;
+    text-align: center;
+    float: left;
+}
+.getitembox__btn--getcode{
+    background: url('../images/btn_getItemcode.png') no-repeat;
+    width: 154px;
+    height: 38px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    float: right;
+}
+
 .rightpanel{
+    width: 500px;
+    height: 800px;
     float: right;
 }
 .tablecontent{
     
-    width: 900px;
+    width: 480px;
     text-align: center;
     vertical-align: middle;
 }
@@ -143,11 +287,24 @@ textarea, input{
       padding-left: 50%;
 }
 .btnRefresh  {
-    background:url("../images/ico_refresh.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background:url("../images/iconrefresh-compressor.png") no-repeat scroll center center rgba(0, 0, 0, 0);
     display: block;
-    height: 20px;
+    height: 50px;
+    width: 50px;
     top:-45px;
-    left: 230px;
+    right: 90px;
     position: relative;
-    width: 20px;
+    float: right;
+    
+}
+.btnRefresh2  {
+    background:url("../images/iconrefresh-compressor.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    display: block;
+    height: 50px;
+    width: 50px;
+    top:-45px;
+    right: 190px;
+    position: relative;
+    float: right;
+    
 }

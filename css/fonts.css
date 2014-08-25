@@ -1,0 +1,7 @@
+﻿@font-face {
+	font-family: 'PSLXSAMSON';
+	src: url('../fonts/PSLXSAMSON.eot');
+	src: local('☺'), url('../fonts/PSLXSAMSON.woff') format('woff'), url('../fonts/PSLXSAMSON.ttf') format('truetype'), url('../fonts/PSLXSAMSON.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
