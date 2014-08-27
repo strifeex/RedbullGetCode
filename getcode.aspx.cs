@@ -48,82 +48,83 @@ public partial class getcode : System.Web.UI.Page
             //usernameLabel.Text = resItem.GetOfflineItemCodeDataResult.ToString();
             if (resItem.itemCode != null)
             {
-                Lblitem.Text = "ได้รับโค้ด" + resItem.itemCode + " " + resItem.itemDesc + " ";
+                Lblitem.Text = resItem.itemCode ;
                 switch (resItem.itemName)
                 {
                     case "Red Bull_001":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/100000.png";
                         break;
                     case "Red Bull_002":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/10000.png";
                         break;
                     case "Red Bull_003":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/1000.png";
                         break;
                     case "Red Bull_004":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/SWAT_HELMET.png";
                         break;
                     case "Red Bull_005":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/OAKLEY_GLASSES.png";
                         break;
                     case "Red Bull_006":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/SWAT_MASK.png";
                         break;
                     case "Red Bull_007":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/ARAB_SCARF.png";
                         break;
                     case "Red Bull_008":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/SOFT_SHOULDER_PAD.png";
                         break;
                     case "Red Bull_009":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/ADVENTURE_BACKPACK.png";
                         break;
                     case "Red Bull_010":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/SOFT_SHIN_PAD.png";
                         break;
                     case "Red Bull_011":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/AK47.png";
                         break;
                     case "Red Bull_012":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/TAR21.png";
                         break;
                     case "Red Bull_013":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/P90.png";
                         break;
                     case "Red Bull_014":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/MP7.png";
                         break;
                     case "Red Bull_015":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/BARRETT_M98.png";
                         break;
                     case "Red Bull_016":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/AWP.png";
                         break;
                     case "Red Bull_017":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/M1887.png";
                         break;
                     case "Red Bull_018":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/BENELLI_M4.png";
                         break;
                     case "Red Bull_019":
-                        Image1.ImageUrl = "images/coin_prize20000.png";
+                        Image1.ImageUrl = "images/MG43.png";
                         break;
                     case "Red Bull_020":
-                        Image1.ImageUrl = "images/gun-1.jpg";
+                        Image1.ImageUrl = "images/DESERT_EAGLE.png";
                         break;
                     case "Red Bull_021":
-                        Image1.ImageUrl = "images/gun-2.jpg";
+                        Image1.ImageUrl = "images/TOMAHAWK_AXE.png";
                         break;
                     default:
-                        Image1.ImageUrl = "images/gun-3.jpg";
+                        Image1.ImageUrl = "images/KUKRI.png";
                         break;
                 }
                 itemHistoryBind(userId, username);
             }
             else
             {
+                //"OfflineDistributedNotFound"
                 Lblitem.Text = "";
-                ScriptManager.RegisterClientScriptBlock(btngetcode, typeof(Button), "Onclick", "alert('redbull code ไม่ถูกต้อง กรุณาทดลองใหม่อีกครั้งค่ะ');", true); return;
+                ScriptManager.RegisterClientScriptBlock(btngetcode, typeof(Button), "Onclick", "alert('code ไม่ถูกต้อง หรือ code ถูกใช้งานไปแล้ว');", true); return;
             }
         }
     }

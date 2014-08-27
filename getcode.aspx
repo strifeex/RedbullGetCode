@@ -22,76 +22,104 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+
 </head>
 <body>
 <div class="maincontent">
     <form id="form1" runat="server">
+
     <div class="leftpanel">
-    <div class="leftpanel__headEvent"></div>
-    
-    <div class="leftpanel__getitembox">   
-        <asp:TextBox ID="i_code" runat="server" placeholder="" required="required" class="getitembox__igetcode"></asp:TextBox>
-        <div class="coundownpanel"><span id="countdown"></span></div>
-        <%--<div class="loadingPanel"></div>--%>
-        <asp:Button ID="btngetcode" runat="server" style="cursor:pointer;" onclick="btngetcode_Click" 
-        CssClass="getitembox__btn--getcode" Text="" />
-    </div>
-    <ContentTemplate>
-                    <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
-                        CaptchaMinTimeout="5" Height="40px" Width="225px" CaptchaWidth="225" 
-                        CaptchaHeight="40" CssClass="capcha_txt" 
-                        Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
-                        CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh2" CausesValidation="false"></asp:LinkButton>  
-    </ContentTemplate>
-
-    <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
-                placeholder="" class="form-control" MaxLength="6" 
-                CssClass="btn-input"></asp:TextBox>
-    </div>
-
-    <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/index.php/users/register"></a>
-
-        <div class="form_list">
-        <asp:Label ID="Lblitem" runat="server" Text="Label"></asp:Label>
-            <p id="itemcode">ITEM CODE</p>
-            <p id="itemDes"></p>
+    <div class="leftpanel__headEvent">
+        <div class="headEvent__logo">
+            <div class="logo__redbull"></div>
+            <div class="logo__FNB"></div>
         </div>
-        <asp:Image ID="Image1" runat="server" />
+        <div class="headEvent__txt">ดื่ม Red Bull เพิ่มพลัง ยิงมันส์ พร้อมลุ้นโชค Final Bullet</div>
+    </div>
+    <div class="leftpanel__GetitemDescr">กรุณาระบุโค้ด 8 หลัก ใต้กระป๋อง Red Bull</div>
+
+    <div class="leftpanel__getitembox">   
+        <asp:TextBox ID="i_code" runat="server" placeholder="" required="required" class="getitembox__igetcode" maxlength="8"></asp:TextBox>
+        <div class="getitembox__coundownpanel">
+            <%--<div class="loadingPanel"></div>--%>
+            <asp:Button ID="btngetcode" runat="server" style="cursor:pointer;" onclick="btngetcode_Click" 
+            CssClass="getitembox__btn--getcode" Text="" />
+            <span id="countdown"></span>
+        </div>
+    </div>
+
+    <div class="leftpanel__captchabox">
+        <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
+                    placeholder="" class="form-control" MaxLength="6" 
+                    CssClass="captchabox__getItemcaptcha"></asp:TextBox>
+        </div>
+
+        <div class="captchabox__img">
+            <ContentTemplate>
+                            <cc1:CaptchaControl ID="ccCode" runat="server" 
+                CaptchaLength="6" CaptchaMaxTimeout="200" 
+                                CaptchaMinTimeout="5" Height="40px" Width="154px" CaptchaWidth="154" 
+                                CaptchaHeight="40" CssClass="captchabox__img__getitem" 
+                                Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                CaptchaFontWarping="None" />
+                            <asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh2" CausesValidation="false"></asp:LinkButton>  
+            </ContentTemplate>
+        </div>
+    </div>
+
+
+        <div class="leftpanel__getItemImage">
+            <asp:Image ID="Image1" runat="server" />
+        </div>
+        <div class="bgShowCode">
+            <center><asp:Label ID="Lblitem" runat="server" Text="Label"></asp:Label></center>
+        </div>
+        <div class="leftpanel__showCodeDescr">ไอเทมโค้ด 16 หลักนี้ ต้องนำไปเติมในเกมก่อนจึงจะได้รับของรางวัล</div>
+        <a class="leftpanel__btn--how2use" href="https://clickalot.co.th/index.php/users/register"></a>
+
     </div>
                    
     <div class="rightpanel">
-      <asp:Label ID="usernameLabel" runat="server" Text="Label"></asp:Label>
-        <br>history
+    <div class="rightpanel__usernamebox">
+      <center><asp:Label ID="usernameLabel" runat="server" Text="Label" class="usernamebox__Lbl"></asp:Label></center>
+    </div>
+    <ul class="rightpanel__btnBox">
+        <a class="btnBox__btn--eventInfo" href="https://clickalot.co.th/index.php/users/register"></a>
+        <a class="btnBox__btn--problem" href="https://clickalot.co.th/users/ticket/create"></a>
+        <a class="btnBox__btn--logout" href="#" onClick="logout();"></a>
+    </ul>
+    <div class="rightpanel__historyTitle">ประวัติการรับโค้ดไอเทม</div>
 
             <div class="table-responsive tablecontent">
-                  <asp:GridView ID="dataTable" EmptyDataText="Data Not Found!" runat="server" AutoGenerateColumns="False" 
-                    class="table-bordered table-condensed table-hover table-striped tablecontent" 
+                  <asp:GridView ID="dataTable" EmptyDataText="ไม่มีข้อมูลการรับไอเทม" runat="server" AutoGenerateColumns="False" 
+                    class="table table-bordered tablecontent" 
                       AllowPaging="True" OnPageIndexChanging="dataTable_PageIndexChanged" 
                       PageSize="10" >
                        <PagerStyle CssClass="cssPager" />
                     <Columns>
-                        <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" >
-                        <ItemStyle Width="12%" Wrap="true"/>
+                        <asp:BoundField DataField="getItemDate" HeaderText="วันที่รับ" DataFormatString="{0:dd/MM/yyyy}">
+                        <ItemStyle Width="5%" Wrap="true"/>
                         </asp:BoundField>
-                        <asp:BoundField DataField="itemCode" HeaderText="Code" >
-                        <ItemStyle Width="5%" />
+                        <asp:BoundField DataField="itemCode" HeaderText="Code">
+                        <ItemStyle Width="20%" font-size="1.5em"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="itemDesc" HeaderText="ของรางวัล" htmlencode="false">
-                        <ItemStyle Width="23%" />
+                        <ItemStyle Width="10%" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="expireDate" HeaderText="วันหมดอายุ" >
-                        <ItemStyle Width="12%" Wrap="true"/>
+                        <asp:BoundField DataField="expireDate" HeaderText="วันหมดอายุ" DataFormatString="{0:dd/MM/yyyy}">
+                        <ItemStyle Width="5%" Wrap="true"/>
                         </asp:BoundField>
                     </Columns>
                       <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
                 </asp:GridView>
             </div>
-        <a class="btn btn_red" onClick="logout();">logout</a>
     </div>
 
     </form>
@@ -99,7 +127,7 @@
 
         <script language="JavaScript" type="text/javascript" charset="utf-8">
 
-            //$("#btngetcode").hide();
+            $("#btngetcode").hide();
 
 //            $('.loadingPanel').html('<div class="spinner">' +
 //            '<div class="circle1 circle"></div>' +
@@ -170,34 +198,5 @@
 
     </script> 
 
-
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-52510534-1', 'auto');
-            ga('send', 'pageview');
-
-    </script>
-
-    <div class="statpanel">
-    <script type="text/javascript" language="javascript1.1" src="http://tracker.stats.in.th/tracker.php?sid=59428"></script>
-    <noscript><a target="_blank" href="http://www.stats.in.th/">www.Stats.in.th</a></noscript>
-
-    <!-- Histats.com  START  (standard)-->
-    <script type="text/javascript">        document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
-    <a href="http://www.histats.com" target="_blank" title="site stats" ><script  type="text/javascript" >
-                                                                             try {
-                                                                                 Histats.start(1, 2735357, 4, 500, 95, 18, "00010000");
-                                                                                 Histats.track_hits();
-                                                                             } catch (err) { };
-    </script></a>
-    <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2735357&101" alt="site stats" border="0"></a></noscript>
-    <!-- Histats.com  END  -->
-    </div>
 </body>
 </html>

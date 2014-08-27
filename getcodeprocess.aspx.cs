@@ -17,20 +17,23 @@ public partial class getcodeprocess : System.Web.UI.Page
         if (Session["lastGetdate"] != null)
         {
             string[] res = ItemHistoryservice.getTimeDiffSeconds(((AuthenCommon)(Session["GetItemUserAuthen"])).userName, ApplicationKey.eventKey);
-
+            // uncomment for use countdown
             if (res[0] == "0")
             {
                 if (res[1].Length < 3)
                 {
                     waitsec = Convert.ToInt32(res[1]);
-                    if (waitsec <= 60)
+                    if (waitsec <= 30)
                     {
-                        waitsec = 60 - waitsec;
+                        waitsec = 30 - waitsec;
+                    }
+                    else {
+                        waitsec = 0;
                     }
                 }
             }
-
-            Response.Write("{ \"waitsec\":\"" + waitsec + "\" ,\"totalsec\":\"" + waitsec + "\" }");
-        } 
+        }
+        //json format
+        Response.Write("{ \"waitsec\":\"" + waitsec + "\" ,\"totalsec\":\"" + waitsec + "\" }");
     }
 }

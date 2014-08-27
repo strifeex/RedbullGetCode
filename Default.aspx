@@ -13,63 +13,87 @@
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/fonts.css"   charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
 </head>
 <body>
 <div class="loginMain">
 <form id="form1" runat="server">
 
 <div class="leftside">
-    <div class="leftside__headEvent"></div>
+    <div class="leftside__headEvent">
+        <div class="logobox">
+            <div class="logobox__L">
+                <div class="L__redbulllogo"></div>
+            </div>
+            <div class="logobox__R">
+                <div class="R__FNBlogo"></div>
+            </div>
+        </div>
+    </div>
     <a class="leftside__btn--infoevent" href="https://clickalot.co.th/index.php/users/register"></a>
 </div>
 <div class="rightside">
-<div class="rightside__txthead">กรุณาล็อกอินเข้าสู่ระบบรับไอเทมโค้ด</div>
-<div class="rightside__username">
-    <div class="labeltxt">กรุณากรอกไอดี</div>
-    <asp:TextBox ID="txtUser" required="required" runat="server" placeholder="" 
-                class="form-control" MaxLength="20" CssClass="IDinput"></asp:TextBox>
-</div>
-<div class="rightside__password">
-    <div class="labeltxt">กรุณากรอกรหัสผ่าน</div>
-            <div class="pass"><asp:TextBox ID="txtPwd" required="required" runat="server" TextMode="Password" 
-                placeholder="" class="form-control" MaxLength="20" CssClass="btn-input"></asp:TextBox></div>
-</div>
-<div class="rightside__captcha">
-            <div class="captcha">
-            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                <ContentTemplate>
-                                <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
-                                    CaptchaMinTimeout="5" Height="55px" Width="250px" CaptchaWidth="250" 
-                                    CaptchaHeight="55" CssClass="capcha_txt" 
-                                    Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
-                                    CaptchaBackgroundNoise="Medium" CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
-                </ContentTemplate>
-            </asp:UpdatePanel>     
-            </div>
-            <div class="labeltxt">กรุณาระบุอักษรตามภาพ</div>
-                        <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
-                placeholder="" class="form-control" MaxLength="6" 
-                CssClass="btn-input"></asp:TextBox></div>
-</div>
-<div class="rightside__buttonbox">
-                <asp:Button ID="btnLogin" runat="server" style="cursor:pointer;" onclick="btnLogin_Click" 
-                CssClass="buttonbox__btn--login" Text="" />
+    <div class="rightside__txthead">กรุณาล็อกอินเข้าสู่ระบบรับไอเทมโค้ด</div>
+    <div class="rightside__username">
+        <div class="labeltxt">กรุณากรอกไอดี</div>
+        <asp:TextBox ID="txtUser" required="required" runat="server" placeholder="" 
+                    class="form-control" MaxLength="20" CssClass="IDinput txtinput"></asp:TextBox>
+    </div>
+    <div class="rightside__password">
+        <div class="labeltxt">กรุณากรอกรหัสผ่าน</div>
+                <div class="pass"><asp:TextBox ID="txtPwd" required="required" runat="server" TextMode="Password" 
+                    placeholder="" class="form-control" MaxLength="20" CssClass="btn-input txtinput"></asp:TextBox></div>
+    </div>
+    <div class="rightside__captcha">
+        <div class="captcha">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                            <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
+                                CaptchaMinTimeout="5" Height="55px" Width="250px" CaptchaWidth="250" 
+                                CaptchaHeight="55" CssClass="capcha_txt" 
+                                Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                                CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
+            </ContentTemplate>
+        </asp:UpdatePanel>     
+        </div>
+        <div class="labeltxt">กรุณาระบุอักษรตามภาพ</div>
+            <div class="captcha-input"><asp:TextBox ID="txtCaptcha" required="required" runat="server" 
+            placeholder="" class="form-control" MaxLength="6" 
+            CssClass="btn-input txtinput"></asp:TextBox></div>
+    </div>
+    <div class="rightside__buttonbox">
+        <asp:Button ID="btnLogin" runat="server" style="cursor:pointer;" onclick="btnLogin_Click" 
+        CssClass="buttonbox__btn--login" Text="" />
                 
-                <a class="buttonbox__btn--forgetID" href="https://clickalot.co.th/index.php/users/register"></a>
+        <a class="buttonbox__btn--forgetID" href="https://clickalot.co.th/users/forget_username"></a>
 
-                <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/index.php/users/register"></a>
+        <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/users/reset_pass"></a>
 
-                <a class="buttonbox__btn--problem" href="https://clickalot.co.th/index.php/users/register"></a>
+        <a class="buttonbox__btn--problem" href="https://clickalot.co.th/users/ticket/create"></a>
+    </div>
 </div>
 
-
+</form>
 </div>
 
-     
-    </form>
-</div>
-    <script>
+    <script>        
+    document.addEventListener("DOMContentLoaded", function () {
+            var elements = document.getElementsByTagName("INPUT");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].oninvalid = function (e) {
+                    e.target.setCustomValidity("");
+                    if (!e.target.validity.valid) {
+                        e.target.setCustomValidity("กรุณากรอกช่องนี้");
+                    }
+                };
+                elements[i].oninput = function (e) {
+                    e.target.setCustomValidity("");
+                };
+            }
+        })
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)

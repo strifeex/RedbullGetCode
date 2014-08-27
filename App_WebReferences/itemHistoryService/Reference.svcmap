@@ -18,11 +18,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:3563/ServiceitemHistory/itemHistoryService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://27.254.94.6/ClickService/ServiceitemHistory/itemHistoryService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="itemHistoryService.disco" MetadataType="Disco" ID="ddd35282-90b0-4fd5-8534-7e0d86c652be" SourceId="1" SourceUrl="http://localhost:3563/ServiceitemHistory/itemHistoryService.asmx?disco" />
-    <MetadataFile FileName="itemHistoryService.wsdl" MetadataType="Wsdl" ID="08a2adc2-5a57-475d-94ea-b4e24879a3c1" SourceId="1" SourceUrl="http://localhost:3563/ServiceitemHistory/itemHistoryService.asmx?wsdl" />
+    <MetadataFile FileName="itemHistoryService1.disco" MetadataType="Disco" ID="2b75af51-e6b1-4e87-9890-7462b6cb5441" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ServiceitemHistory/itemHistoryService.asmx?disco" />
+    <MetadataFile FileName="itemHistoryService1.wsdl" MetadataType="Wsdl" ID="694d6eb7-823c-4b8b-b938-9b782ab4d28b" SourceId="1" SourceUrl="http://27.254.94.6/ClickService/ServiceitemHistory/itemHistoryService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
