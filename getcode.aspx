@@ -25,6 +25,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+    <link type="text/css" rel="stylesheet" href="css/fonts.css" charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <!--[if lt IE 9]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
@@ -82,7 +83,7 @@
             <center><asp:Label ID="Lblitem" runat="server" Text="Label"></asp:Label></center>
         </div>
         <div class="leftpanel__showCodeDescr">ไอเทมโค้ด 16 หลักนี้ ต้องนำไปเติมในเกมก่อนจึงจะได้รับของรางวัล</div>
-        <a class="leftpanel__btn--how2use" href="https://clickalot.co.th/index.php/users/register"></a>
+        <a class="leftpanel__btn--how2use" href="http://www.fnb.in.th/gameinfo.aspx?postId=Yld6TjNQb0hlWmFIeU9QckcyOWUyZz09&cate=guide" target="_blank"></a>
 
     </div>
                    
@@ -91,8 +92,8 @@
       <center><asp:Label ID="usernameLabel" runat="server" Text="Label" class="usernamebox__Lbl"></asp:Label></center>
     </div>
     <ul class="rightpanel__btnBox">
-        <a class="btnBox__btn--eventInfo" href="https://clickalot.co.th/index.php/users/register"></a>
-        <a class="btnBox__btn--problem" href="https://clickalot.co.th/users/ticket/create"></a>
+        <a class="btnBox__btn--eventInfo" href="http://www.fnb.in.th/contentpreviews.aspx?postId=SERNN2VHYi9vL0swam1PZVBVZUdUQT09" target="_blank"></a>
+        <a class="btnBox__btn--problem" href="http://www.fnb.in.th/gameinfo.aspx?postId=c0V6VWdGekZIeVE3dkZmK0NnTjFnZz09&cate=guide" target="_blank"></a>
         <a class="btnBox__btn--logout" href="#" onClick="logout();"></a>
     </ul>
     <div class="rightpanel__historyTitle">ประวัติการรับโค้ดไอเทม</div>
@@ -108,13 +109,13 @@
                         <ItemStyle Width="5%" Wrap="true"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="itemCode" HeaderText="Code">
-                        <ItemStyle Width="20%" font-size="1.5em"/>
+                        <ItemStyle Width="13%" font-size="1.5em"/>
                         </asp:BoundField>
                         <asp:BoundField DataField="itemDesc" HeaderText="ของรางวัล" htmlencode="false">
-                        <ItemStyle Width="10%" />
+                        <ItemStyle Width="19%" />
                         </asp:BoundField>
                         <asp:BoundField DataField="expireDate" HeaderText="วันหมดอายุ" DataFormatString="{0:dd/MM/yyyy}">
-                        <ItemStyle Width="5%" Wrap="true"/>
+                        <ItemStyle Width="5%" font-size="1.5em" Wrap="true"/>
                         </asp:BoundField>
                     </Columns>
                       <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" />
@@ -183,17 +184,20 @@
                         display();
 
                     }, "json");
+
+                icode.value = "";
             }
             getCodedata();
 
             function logout() {
-                var tmpParams = {};
+//                var tmpParams = {};
 
-                $.post("logoutprocess.aspx", tmpParams,
-                function (data, status) {
+//                $.post("logoutprocess.aspx", tmpParams,
+//                function (data, status) {
 
-                    window.location = "default.aspx";
-                });
+//                    window.location = "default.aspx";
+                //                });
+                window.location = "default.aspx";
             }
 
     </script> 

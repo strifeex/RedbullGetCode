@@ -11,7 +11,7 @@
     <meta name="description" content="เกมออนไลน์ เกมส์ออนไลน์ เกมส์มันๆ สนุกๆ เล่นเกมส์ เกม finalbullet เกมส์ game games online fnb">	
 	<meta http-equiv="robots" content="index,follow">
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
-    <link type="text/css" rel="stylesheet" href="css/fonts.css"   charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/fonts.css" charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <!--[if lt IE 9]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <a class="leftside__btn--infoevent" href="https://clickalot.co.th/index.php/users/register"></a>
+    <a class="leftside__btn--infoevent" href="http://www.fnb.in.th/contentpreviews.aspx?postId=SERNN2VHYi9vL0swam1PZVBVZUdUQT09" target="_blank"></a>
 </div>
 <div class="rightside">
     <div class="rightside__txthead">กรุณาล็อกอินเข้าสู่ระบบรับไอเทมโค้ด</div>
@@ -54,7 +54,7 @@
                             <cc1:CaptchaControl ID="ccCode" runat="server" CaptchaLength="6" CaptchaMaxTimeout="200" 
                                 CaptchaMinTimeout="5" Height="55px" Width="250px" CaptchaWidth="250" 
                                 CaptchaHeight="55" CssClass="capcha_txt" 
-                                Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red" 
+                                Font-Names="Tahoma" Font-Size="XX-Large" FontColor="Red"
                                 CaptchaFontWarping="None" />&nbsp;<asp:LinkButton ID="lnkrefresh" runat="server" OnClick="_Click" class="btnRefresh" CausesValidation="false"></asp:LinkButton>  
             </ContentTemplate>
         </asp:UpdatePanel>     
@@ -68,11 +68,11 @@
         <asp:Button ID="btnLogin" runat="server" style="cursor:pointer;" onclick="btnLogin_Click" 
         CssClass="buttonbox__btn--login" Text="" />
                 
-        <a class="buttonbox__btn--forgetID" href="https://clickalot.co.th/users/forget_username"></a>
+        <a class="buttonbox__btn--forgetID" href="https://clickalot.co.th/users/forget_username" target="_blank"></a>
 
-        <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/users/reset_pass"></a>
+        <a class="buttonbox__btn--forgetPass" href="https://clickalot.co.th/users/reset_pass" target="_blank"></a>
 
-        <a class="buttonbox__btn--problem" href="https://clickalot.co.th/users/ticket/create"></a>
+        <a class="buttonbox__btn--problem" href="http://www.fnb.in.th/gameinfo.aspx?postId=c0V6VWdGekZIeVE3dkZmK0NnTjFnZz09&cate=guide" target="_blank"></a>
     </div>
 </div>
 

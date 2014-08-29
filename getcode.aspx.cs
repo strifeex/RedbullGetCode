@@ -73,7 +73,7 @@ public partial class getcode : System.Web.UI.Page
                         Image1.ImageUrl = "images/ARAB_SCARF.png";
                         break;
                     case "Red Bull_008":
-                        Image1.ImageUrl = "images/SOFT_SHOULDER_PAD.png";
+                        Image1.ImageUrl = "images/SOFT_ARM_PAD.png";
                         break;
                     case "Red Bull_009":
                         Image1.ImageUrl = "images/ADVENTURE_BACKPACK.png";
@@ -118,15 +118,19 @@ public partial class getcode : System.Web.UI.Page
                         Image1.ImageUrl = "images/KUKRI.png";
                         break;
                 }
+
+                txtCaptcha.Text = "";
                 itemHistoryBind(userId, username);
             }
             else
             {
                 //"OfflineDistributedNotFound"
                 Lblitem.Text = "";
+                txtCaptcha.Text = "";
                 ScriptManager.RegisterClientScriptBlock(btngetcode, typeof(Button), "Onclick", "alert('code ไม่ถูกต้อง หรือ code ถูกใช้งานไปแล้ว');", true); return;
             }
         }
+
     }
 
     protected void itemHistoryBind(string userId, string userName)

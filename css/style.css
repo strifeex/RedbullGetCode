@@ -30,42 +30,42 @@ body {
 }
 
 .leftside__headEvent {
-  height: 320px;
+  height: 370px;
 }
 
 .logobox {
-  width: 550px;
-  height: 100px;
+  width: 440px;
+  height: 160px;
   display: block;
   margin: auto;
-  margin-top: 320px;
+  margin-top: 250px;
 }
 
 .logobox__L {
-  width: 350px;
-  height: 100px;
+  width: 200px;
+  height: 160px;
   float: left;
 }
 
 .L__redbulllogo {
-  background: url("../images/logoLogin-REDBULLEXTRA-compressor.png") no-repeat;
-  width: 350px;
-  height: 63px;
+  background: url("../images/redbullLogo_login-compressor.png") no-repeat;
+  width: 166px;
+  height: 160px;
   display: block;
   margin: auto;
-  margin-top: 20px;
 }
 
 .logobox__R {
-  width: 200px;
-  height: 100px;
+  width: 240px;
+  height: 137px;
   float: right;
+  margin-top: 20px;
 }
 
 .R__FNBlogo {
-  background: url("../images/FNBLogo_login-tiny.png") no-repeat;
-  width: 174px;
-  height: 100px;
+  background: url("../images/FNBLogo_login-compressor.png") no-repeat;
+  width: 240px;
+  height: 137px;
   display: block;
   margin: auto;
 }
@@ -115,6 +115,10 @@ body {
 
 .capcha_txt {
   margin-left: 80px;
+}
+
+.capcha_txt > img {
+  border-radius: 5px;
 }
 
 #UpdatePanel1 {
@@ -179,32 +183,34 @@ body {
 }
 
 .leftpanel__headEvent {
-  height: 280px;
+  height: 220px;
 }
 
 .headEvent__logo {
-  height: 240px;
-  width: 643px;
+  height: 156px;
+  width: 390px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .logo__redbull {
-  background-image: url("../images/logo-RED-BULL-EXTRAgetcode-tiny.png");
+  float: left;
+  background-image: url("../images/redbullLogo_getcode-compressor.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 90px;
-  width: 500px;
+  height: 156px;
+  width: 150px;
   margin: auto;
 }
 
 .logo__FNB {
-  background-image: url("../images/LOGOFNB_landscapGetcode-tiny.png");
+  float: right;
+  background-image: url("../images/FNBLogo_getcode-compressor.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 111px;
-  width: 400px;
-  margin: auto;
+  height: 132px;
+  width: 228px;
+  margin-top: 24px;
 }
 
 .headEvent__txt {
@@ -324,7 +330,7 @@ body {
   height: 46px;
   display: block;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .usernamebox__Lbl {
